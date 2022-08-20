@@ -1,0 +1,30 @@
+{
+  "name": "Bet_Strategy",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Collins Maduka",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "start-watch": "nodemon server.js",
+    "install-client": "cd client && yarn install",
+    "build": "cd client && yarn run build",
+    "heroku-postbuild": "yarn run install-client && yarn run build",
+    "dev": "concurrently \"yarn run start-watch\" \"cd client && yarn start\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mongodb": "^4.8.1",
+    "mongoose": "^6.5.2",
+    "socket.io": "^4.5.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.19"
+  }
+}
